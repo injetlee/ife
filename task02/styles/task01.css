@@ -1,0 +1,46 @@
+*{
+    margin:0;
+    padding:0;
+}
+.nav{
+    background:#333333;
+    height:50px;
+}
+.nav li{
+    display:inline-block;
+    font-size:15px;
+    margin-top:10px;
+    margin-left:30px;
+
+}
+h3,span{
+    color:#6b734e;
+}
+p{
+    text-indent:1cm;
+}
+.first,.second,.last,.pic{
+    border:1px solid #333333;
+    margin:10px 15px;
+    padding-left:30px;
+    padding-bottom:30px;
+
+}
+.second li{
+    list-style:none;
+}
+.pic div{
+    border:1px solid #333333;
+    width:150px;
+    margin:5px;
+}
+table .th{
+    background: #333333;
+}
+table tr:last-child{
+    background:red;
+}
+table{
+    width:100%;
+    border-collapse:collapse;
+}
