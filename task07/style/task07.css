@@ -1,0 +1,82 @@
+*{
+    margin:0;
+    padding:0;
+}
+header{
+    height:60px;
+    min-width:500px;
+    width:100%;
+}
+.logo img{
+    width:40px;
+    height:40px;
+    margin-left:40px;
+    padding-top:10px;
+    
+
+}
+.logo span{
+    font-size:24px;
+    font-weight:bold;
+    color:#4e3a4f;
+    margin-left:15px;
+}
+menu{
+    display:inline;
+    float:right;
+    margin-right:30px;
+}
+menu li{
+    list-style:none;
+    display:inline-block;
+    margin-left:40px;
+    line-height:60px;
+    color:#534141;
+    font-family:"微软雅黑";
+    cursor:pointer;
+}
+.login{
+    width:80px;
+
+    background:url("../images/icon-2.jpg") no-repeat top center;
+    text-align:center;
+}
+.pic{
+    background-image:url("../images/pic01.jpg");
+    background-size:100% auto;
+    height:650px;
+    position:relative;
+}
+.time-of p:first-child {
+    font-size:60px;
+    font-family:arial;
+    color:#fff;
+    letter-spacing: 3px;
+}
+.time-of p {
+    font-size:20px;
+    font-family:"microsoft yahei";
+    color:#fff;
+}
+
+.time-of{
+    margin-bottom:30px;
+    position:absolute;
+    top:200px;
+    left:100px;
+}
+.time-of p:last-child {
+    font-size:40px;
+    font-family:"microsoft yahei";
+    color:#fff;
+    margin-top:35px;
+    background:#e53c3c;
+    text-align:center;
+    width:250px;
+    transition:1s;
+}
+.time-of p:last-child:hover{
+    background:#ea8585;
+    border-radius:10px;
+
+}
