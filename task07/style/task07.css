@@ -1,6 +1,10 @@
 *{
     margin:0;
     padding:0;
+    box-sizing:border-box;
+}
+body>div{
+  width:100%;
 }
 header{
     height:60px;
@@ -12,7 +16,7 @@ header{
     height:40px;
     margin-left:40px;
     padding-top:10px;
-    
+
 
 }
 .logo span{
@@ -20,11 +24,14 @@ header{
     font-weight:bold;
     color:#4e3a4f;
     margin-left:15px;
+    line-height:60px;
+    vertical-align:top;
 }
 menu{
     display:inline;
     float:right;
     margin-right:30px;
+    position:relative;
 }
 menu li{
     list-style:none;
@@ -34,12 +41,67 @@ menu li{
     color:#534141;
     font-family:"微软雅黑";
     cursor:pointer;
+    transition-property:color;
+    transition-timing-function:ease-in-out;
+    transition-duration:0.4s;
+}
+menu li:hover{
+  color:#f04c57;
+}
+menu>div{
+  display:inline-block;
+  position:relative;
+}
+menu span{
+  display:inline-block;
+  width:0;
+  background-color:blue;
+  border-top:3px solid #e53c3c;
+  position:absolute;
+  left:0;
+  top:57px;
+  transition-property: width left;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.4s;
+}
+menu li:first-child~span{
+  width:14%;
+}
+menu li:nth-child(2):hover~span{
+  width:14%;
+  left:15%;
+}
+menu li:nth-child(3):hover~span{
+  width:14%;
+  left:32%;
+}
+menu li:nth-child(4):hover~span{
+  width:14%;
+  left:50%;
+}
+menu li:nth-child(5):hover~span{
+  width:14%;
+  left:65%;
 }
 .login{
     width:80px;
 
-    background:url("../images/icon-2.jpg") no-repeat top center;
+    background:url("../images/icon-2.jpg") no-repeat left center;
     text-align:center;
+}
+.move{
+  border-top:3px solid #e53c3c;
+  background:yellow;
+  position:absolute;
+  bottom:5px;
+  width:0;
+  transition-property: width;
+  transition-duration:0.5s;
+  transition-timing-function: linear;
+  margin-left:15px;
+}
+menu>div:hover .move{
+  width:100px;
 }
 .pic{
     background-image:url("../images/pic01.jpg");
@@ -58,7 +120,6 @@ menu li{
     font-family:"microsoft yahei";
     color:#fff;
 }
-
 .time-of{
     margin-bottom:30px;
     position:absolute;
@@ -66,7 +127,7 @@ menu li{
     left:100px;
 }
 .time-of p:last-child {
-    font-size:40px;
+    font-size:30px;
     font-family:"microsoft yahei";
     color:#fff;
     margin-top:35px;
@@ -79,4 +140,74 @@ menu li{
     background:#ea8585;
     border-radius:10px;
 
+}
+#section-1{
+  width:100%;
+  height:240px;
+}
+#section-1>div{
+    display: inline-block;
+    width:25%;
+    height:100%;
+    margin:0;
+    padding:0;
+    position:relative;
+
+}
+#section-1 .image{
+  width:100%;
+  height:30%;
+  position:absolute;
+  top:40px;
+}
+#section-1 .circle .image{
+    background:rgb(255,255,255) url("../images/icon-3.jpg") center top no-repeat;
+}
+#section-1 .flag .image{
+    background:rgb(255,255,255) url("../images/icon-4.jpg") center top no-repeat;
+}
+#section-1 .flower .image{
+    background:rgb(255,255,255) url("../images/icon-5.jpg") center top no-repeat;
+}
+#section-1 .square .image{
+    background:rgb(255,255,255) url("../images/icon-6.jpg") center top no-repeat;
+}
+#section-1 .message{
+  width:100%;
+  height:30%;
+  position:absolute;
+  bottom:40px;
+  text-align:center;
+  border-right:2px solid #534141;
+  font-size:13px;
+  color:#534141;
+}
+#section-1 .message:hover p{
+  color:#be4f41;
+}
+#section-2 {
+  width:100%;
+  height:400px;
+  position:relative;
+  background:#edeaea;
+}
+#section-2 .image{
+  background: url("../images/icon-1.png") top center no-repeat;
+  width:100%;
+  height:30%;
+  position:absolute;
+  bottom:230px;
+  text-align:center;
+  font-size:13px;
+  color:#534141;
+}
+#section-2 .message{
+  color:#534141;
+  font-size:50px;
+  font-family:"微软雅黑";
+  width:100%;
+  height:30%;
+  position:absolute;
+  bottom:40px;
+  text-align:center;
 }
