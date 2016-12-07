@@ -182,6 +182,9 @@ menu>div:hover .move{
   font-size:13px;
   color:#534141;
 }
+#section-1 .square .message{
+  border-right:0;
+}
 #section-1 .message:hover p{
   color:#be4f41;
 }
@@ -210,4 +213,43 @@ menu>div:hover .move{
   position:absolute;
   bottom:40px;
   text-align:center;
+}
+#section-3{
+  background:url("../images/pic02.jpg") center center no-repeat;
+  background-size:cover;
+  width:100%;
+  height:400px;
+  position:relative;
+}
+#section-3 .map{
+
+  position:absolute;
+  top:50px;
+  width:100%;
+
+}
+#section-3 .map p{
+  text-align:center;
+}
+#section-3 .map p:first-child{
+  color:#fff;
+  font-size:22px;
+}
+#section-3 .map span{
+  display:block;
+  border-top:4px solid #fff;
+  margin-top:15px;
+  margin:15px auto;
+  width:20px;
+  transition-property:width;
+  transition-timing-function:ease-in-out;
+  transition-duration:0.5s;
+}
+#section-3 .map:hover span{
+  width:300px;
+}
+#section-3 .map p:last-child{
+  color:#fff;
+  font-size:13px;
+  margin-top:20px;
 }
