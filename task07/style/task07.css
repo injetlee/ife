@@ -1,6 +1,7 @@
 *{
     margin:0;
     padding:0;
+    box-sizing:border-box;
 }
 body>div{
   width:100%;
@@ -259,7 +260,7 @@ menu>div:hover .move{
   margin-left:10%;
 }
 #section-3 .input-form div{
-  margin-left:50px;
+  margin:auto 70px;
   display:inline-block;
   width:200px;
   height:30px;
@@ -277,7 +278,7 @@ menu>div:hover .move{
 #section-3 .input-form .country ul{
   list-style: none;
   position:absolute;
-  top:30px;
+  top:26px;
   left:-2px;
   display:none;
 }
@@ -293,7 +294,135 @@ menu>div:hover .move{
 }
 #section-3 .input-form .country:focus{
   border:2px solid #cc3333;
+  height:30px;
+  /*width:196px;*/
+  /*height:26px;*/
 }
 #section-3 .input-form .country:focus ul li:hover{
   background-color:#cc3333;
+}
+#section-3 .input-form .province{
+  background:url("../images/icon-7.png") 170px center no-repeat #fff;
+  background-size:20px 20px;
+  position:relative;
+}
+#section-3 .input-form .province:before{
+  content:attr(selected);
+  line-height: 30px;
+  font-size: 15px;
+}
+#section-3 .input-form .province ul{
+  list-style: none;
+  position:absolute;
+  top:26px;
+  left:-2px;
+  display:none;
+}
+#section-3 .input-form .province:focus>ul{
+  display:block;
+  width:196px;
+  border:2px solid #cc3333;
+  cursor:pointer;
+  background:#ddd;
+}
+#section-3 .input-form .province:focus>ul li{
+  padding-left:5px;
+  /*width:196px;*/
+}
+#section-3 .input-form .province:focus{
+  border:2px solid #cc3333;
+  /*width:196px;*/
+}
+#section-3 .input-form .province:focus ul li:hover{
+  background-color:#cc3333;
+}
+#section-3 .input-form .city{
+  background:url("../images/icon-7.png") 170px center no-repeat #fff;
+  background-size:20px 20px;
+  position:relative;
+}
+#section-3 .input-form .city:before{
+  content:attr(selected);
+  line-height: 30px;
+  font-size: 15px;
+}
+#section-3 .input-form .search{
+  background:#be4f48;
+  display:inline-block;
+  width:200px;
+  height:30px;
+  transition-property:background;
+  transition-duration:0.5s;
+  margin:auto 70px;
+  line-height:30px;
+  text-align:center;
+}
+#section-3 .input-form .search:hover{
+  background:#e31212;
+}
+#section-4{
+  height:500px;
+  width:100%;
+  background:#edeaea;
+  position:relative;
+}
+#section-4 div{
+  height:400px;
+  width:20%;
+  top:50px;
+  position:absolute;
+  display:inline-block;
+
+}
+#section-4 .pic1{
+  left:10%;
+  background:url("../images/pic03.jpg") center top no-repeat;
+}
+#section-4 .pic1 p{
+  color:#44403f;
+  font-size:14px;
+  display:block;
+  text-align:center;
+  margin:auto auto;
+  padding-top:350px;
+}
+#section-4 .pic2{
+  left:30%;
+    background:url("../images/pic04.jpg") center bottom no-repeat;
+}
+#section-4 .pic2 p{
+  color:#44403f;
+  font-size:14px;
+  display:block;
+  text-align:center;
+  margin:auto auto;
+  padding-bottom:350px;
+}
+#section-4 .pic3{
+  left:50%;
+    background:url("../images/pic05.jpg") center top no-repeat;
+}
+#section-4 .pic3 p{
+  color:#44403f;
+  font-size:14px;
+  display:block;
+  text-align:center;
+  margin:auto auto;
+  padding-top:350px;
+}
+#section-4 .pic4{
+  left:70%;
+    background:url("../images/pic06.jpg") center bottom no-repeat;
+}
+#section-4 .pic4 p{
+  color:#44403f;
+  font-size:14px;
+  display:block;
+  text-align:center;
+  margin:auto auto;
+  padding-bottom:350px;
+}
+#section-4 div span{
+  color:#b3afac;
+  font-size:12px;
 }
