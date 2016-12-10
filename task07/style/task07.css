@@ -1,7 +1,6 @@
 *{
     margin:0;
     padding:0;
-    box-sizing:border-box;
 }
 body>div{
   width:100%;
@@ -252,4 +251,49 @@ menu>div:hover .move{
   color:#fff;
   font-size:13px;
   margin-top:20px;
+}
+#section-3 .input-form{
+  position:absolute;
+  top:200px;
+  width:80%;
+  margin-left:10%;
+}
+#section-3 .input-form div{
+  margin-left:50px;
+  display:inline-block;
+  width:200px;
+  height:30px;
+}
+#section-3 .input-form .country{
+  background:url("../images/icon-7.png") 170px center no-repeat #fff;
+  background-size:20px 20px;
+  position:relative;
+}
+#section-3 .input-form .country:before{
+  content:attr(selected);
+  line-height: 30px;
+  font-size: 15px;
+}
+#section-3 .input-form .country ul{
+  list-style: none;
+  position:absolute;
+  top:30px;
+  left:-2px;
+  display:none;
+}
+#section-3 .input-form .country:focus>ul{
+  display:block;
+  width:200px;
+  border:2px solid #cc3333;
+  cursor:pointer;
+  background:#ddd;
+}
+#section-3 .input-form .country:focus>ul li{
+  padding-left:5px;
+}
+#section-3 .input-form .country:focus{
+  border:2px solid #cc3333;
+}
+#section-3 .input-form .country:focus ul li:hover{
+  background-color:#cc3333;
 }
