@@ -603,3 +603,32 @@ menu>div:hover .move{
   top:240px;
   left:0;
 }
+#section-7{
+  height:1000px;
+  width:100%;
+  background:pink;
+}
+#section-7 .top{
+  height:300px;
+  width:100%;
+  text-align: center;
+  padding-top:50px;
+  color:#b3afac;
+  font-size:14px;
+}
+#section-7 .top span:nth-child(1){
+  font-size:18px;
+  color:#000;
+}
+#section-7 .top span:nth-child(2){
+  display:block;
+  width:50px;
+  margin:15px auto;
+  border:2px solid #e84e4c;
+  transition:width;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+#section-7 .top:hover span:nth-child(2){
+  width:150px;
+}
