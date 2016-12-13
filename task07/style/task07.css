@@ -256,8 +256,8 @@ menu>div:hover .move{
 #section-3 .input-form{
   position:absolute;
   top:200px;
-  width:80%;
-  margin-left:10%;
+  width:100%;
+  margin-left:5%;
 }
 #section-3 .input-form div{
   margin:auto 70px;
@@ -606,10 +606,10 @@ menu>div:hover .move{
 #section-7{
   height:1000px;
   width:100%;
-  background:pink;
+  background:#fff;
 }
 #section-7 .top{
-  height:300px;
+  height:250px;
   width:100%;
   text-align: center;
   padding-top:50px;
@@ -632,3 +632,114 @@ menu>div:hover .move{
 #section-7 .top:hover span:nth-child(2){
   width:150px;
 }
+#section-7 .center .left{
+  display:inline-block;
+  width:40%;
+  height:500px;
+  text-align: left;
+  padding-left:5%;
+  padding-right:5%;
+}
+#section-7 .center .left dt{
+  margin-top:40px;
+  margin-bottom:20px;
+}
+#section-7 .center .left .sign{
+  text-align: right;
+}
+#section-7 .center .right{
+  vertical-align: top;
+  display: inline-block;
+  width:60%;
+  height:500px;
+  padding-left:5%;
+}
+#section-7 .center .right input{
+  height: 40px;
+  width:300px;
+  margin-right:20px;
+  background: #e3e3e3;
+  margin-top:20px;
+  font-size:14px;
+  color:#4e3a4f;
+  padding-left:5px;
+  border-style:none;
+  }
+  #section-7 .center .right input:focus{
+    background:#fff;
+    border:1px solid #e3e3e3;
+  }
+  #section-7 .center .right textarea{
+    width:620px;
+    height:140px;
+    margin:20px auto;
+    background:#e3e3e3;
+    font-size:14px;
+    color:#4e3a4f;
+    padding-left:5px;
+    border-style:none;
+  }
+  #section-7 .center .right textarea:focus{
+    background:#fff;
+    border:1px solid #e3e3e3;
+  }
+  #section-7 .center .right input[type="submit"]{
+    width:620px;
+    height:40px;
+  }
+  #section-7 .bottom{
+    height:250px;
+    width:100%;
+    background:#33363f;
+    text-align: center;
+    padding-top:20px;
+    color:#f7f8fc;
+    font-size:14px;
+  }
+  #section-7 .bottom span{
+    display:block;
+    font-size:20px;
+  }
+  #section-7 .bottom input{
+    margin:20px auto;
+    width:50%;
+    height:40px;
+  }
+  #section-7 .bottom button{
+    width:150px;
+    height:40px;
+  }
+
+  #section-7 .bottom i{
+    display:inline-block;
+    margin:15px 2px;
+    width:50px;
+    height:50px;
+    line-height: 50px;
+    vertical-align: top;
+    font-size: 15px;
+  }
+    #section-7 .bottom i:hover{
+      font-size:30px;
+    }
+footer{
+      height:80px;
+      width:100%;
+      background:#30303a;
+      color:#fff;
+    }
+footer span:nth-child(1){
+      display:inline-block;
+      margin-left:30%;
+      line-height: 80px;
+      vertical-align: top;
+    }
+  footer span:nth-child(2){
+      display:inline-block;
+      margin-left:40%;
+      line-height: 80px;
+      vertical-align: top;
+    }
+    footer span:nth-child(2) a{
+      color:#fff;
+    }
