@@ -96,3 +96,78 @@ header .login{
 	position:absolute;
 	color:#fff;
 }
+.left .info{
+	position: absolute;
+	top:120px;
+	left:0;
+	width:250px;
+	height:80px;
+}
+.left .info .left{
+	width:125px;
+	display:inline-block;
+	height:50px;
+	border-right:2px solid #828f96;
+	text-align: center;
+}
+.left .info .right{
+	width:125px;
+	display:inline-block;
+	height:50px;
+	text-align: center;
+}
+.left .first-folder{
+	position:absolute;
+	top:200px;
+	left:45px;
+	color:#fff;
+	cursor:pointer;
+}
+.left .first-folder div{
+	margin-top:10px;
+}
+.left .second-folder>div{
+	margin-top:10px;
+	margin-left:15px;
+	cursor:pointer;
+}
+.left .second-folder dd{
+	margin-top:10px;
+	margin-left:35px;
+}
+.left .first-folder .second-folder>div{
+	display:none;
+}
+.left .first-folder dd{
+	display:none;
+}
+.right .top{
+	width:100%;
+	height:30px;
+	background:#fff;
+}
+.right .top li{
+	list-style: none;
+	display:inline-block;
+	color:#897373;
+}
+.right .top li::after{
+	content:" \\ ";
+}
+.right .top li:first-child{
+	margin-left:30px;
+}
+.right .top li:last-child::after{
+	content:'';
+}
+.right .content{
+	background: #ededed;
+}
+.right .first{
+	height:100px;
+	background: #fff;
+	margin-left:350px;
+	margin-right:50px;
+	margin-top:10px;
+
+}
