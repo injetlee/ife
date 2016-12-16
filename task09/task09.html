@@ -16,6 +16,7 @@
 		</div>
 		<div class="search">
 			<i class="fa fa-search"></i>
+			<input type="text">
 		</div>
 		<div class="login">
 			<i class="fa fa-user">&nbsp;登录</i>
@@ -33,8 +34,10 @@
 			<div class="second-folder "><span class="fa fa-th-list av">个人报表</span>
 				<div>
 					<div class="dt">
-						<i class="fa fa-chevron-right fa-fw"></i>
-						<i class="fa fa-folder fa-fw"></i>文件一
+						<span>
+							<i class="fa fa-chevron-right fa-fw"></i>
+							<i class="fa fa-folder fa-fw"></i>文件一
+						</span>
 					
 						<dd class="first">
 							<i class="fa fa-file-text-o fa-fw"></i>
@@ -43,8 +46,10 @@
 						<dd class="first"><i class="fa fa-file-text-o fa-fw"></i>文档2</dd>
 					</div>
 					<div class="dt">
-						<i class="fa fa-chevron-right fa-fw"></i>
-						<i class="fa fa-folder fa-fw"></i>文件二
+						<span>
+							<i class="fa fa-chevron-right fa-fw"></i>
+							<i class="fa fa-folder fa-fw"></i>文件二
+						</span>
 					
 						<dd class="second">
 						<i class="fa fa-file-text-o fa-fw"></i>
@@ -53,8 +58,10 @@
 						<dd><i class="fa fa-file-text-o fa-fw"></i>文档2</dd>
 					</div>
 					<div class="dt">
-						<i class="fa fa-chevron-right fa-fw"></i>
-						<i class="fa fa-folder fa-fw"></i>文件三
+						<span>
+							<i class="fa fa-chevron-right fa-fw"></i>
+							<i class="fa fa-folder fa-fw"></i>文件三
+						</span>
 					
 						<dd class="second">
 						<i class="fa fa-file-text-o fa-fw"></i>
@@ -81,7 +88,32 @@
 			</ul>
 		</div>
 		<div class="content">
-			<div class="first"></div>
+			<div class="first">
+				<form method="POST">
+					<div class="query-item">
+						<label for="">查询项</label>
+						<select name="" id="">
+							<option value="">第一项</option>
+							<option value="">第二项</option>
+						</select>
+					</div>
+					<div class="second">
+						<label for="">买方</label>
+						<select name="" id="">
+							<option value="">小A</option>
+							<option value="">小B</option>
+						</select><br/>
+						<label for="">卖方</label>
+						<select name="" id="">
+							<option value="">小C</option>
+							<option value="">小D</option>
+						</select>
+						<span class="image"><i>换</i></span>
+					</div>
+					<div></div>
+					<div></div>
+				</form>
+			</div>
 			<div></div>
 			<div></div>
 			<div></div>

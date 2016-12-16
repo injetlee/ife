@@ -1,10 +1,12 @@
 $(function(){
-	$(".left .first-folder .second-folder .dt").toggle(function(){
+	$(".left .first-folder .second-folder .dt span").toggle(function(){
 		//alert('a');
-		$(this).children("dd").toggle();
+		$(this).children("i:first-child").attr("class","fa fa-chevron-down fa-fw");
+		$(this).siblings("dd").toggle();
 	},function(){
 		//alert('b')
-		$(this).children("dd").toggle();
+		$(this).children("i:first-child").attr("class","fa fa-chevron-right fa-fw");
+		$(this).siblings("dd").toggle();
 	});
 
 });
