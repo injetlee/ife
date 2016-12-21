@@ -81,16 +81,19 @@ function sortAqiData(data) {
  */
 function render(data) {
   var getUl = document.getElementById("resort");
+  var oContent = "";
   for(var i=0;i<data.length;i++){
-    var oLi = document.createElement("li");
-    var oCity = document.createTextNode(data[i][0]);
-    var oB = document.createElement("b");
-    var oAqi = document.createTextNode(data[i][1]);
-    oB.appendChild(oAqi);
-    oLi.appendChild(oB);
-    oLi.insertBefore(oCity,oB);
-    getUl.appendChild(oLi);
+    // var oLi = document.createElement("li");
+    // var oCity = document.createTextNode(data[i][0]);
+    // var oB = document.createElement("b");
+    // var oAqi = document.createTextNode(data[i][1]);
+    // oB.appendChild(oAqi);
+    // oLi.appendChild(oB);
+    // oLi.insertBefore(oCity,oB);
+    // getUl.appendChild(oLi);
+  oContent += "<li>" + data[i][0] + data[i][1] + "</li>";
   }
+  getUl.innerHTML = oContent;
 
 }
 
