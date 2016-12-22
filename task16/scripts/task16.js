@@ -82,6 +82,7 @@ function init() {
   var table = document.getElementById("aqi-table");
   table.addEventListener("click",function(e){
     if(e.target && e.target.nodeName == 'BUTTON'){
+      console.log(e.target)
       delBtnHandle(e.target)
     }
   })
