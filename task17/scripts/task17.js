@@ -60,8 +60,8 @@ var pageState = {
  * 渲染图表
  */
 function renderChart() {
-  console.log(pageState.nowGraTime);
-  console.log(pageState.nowSelectCity);
+  // console.log(pageState.nowGraTime);
+  // console.log(pageState.nowSelectCity);
 
 }
 
@@ -129,9 +129,39 @@ function initCitySelector() {
 function initAqiChartData() {
   // 将原始的源数据处理成图表需要的数据格式
   // 处理好的数据存到 chartData 中
-  var toJson = JSON.stringify(aqiSourceData,null,4);
-  chartData = toJson;
-  console.log(chartData)
+  // var toJson = JSON.stringify(aqiSourceData,null,4);
+  // chartData = toJson;
+  // console.log(chartData)
+  var dayAqi = aqiSourceData["北京"];
+  chartData["北京"] = dayAqi;
+  // console.log(dayAqi);
+  //var weekAqi = dayAqi.length;
+ var count = 0;
+ var countDay =0;
+ var weekAqi;
+ var sumWeek = 0;
+var weekNum = 1;
+var weekResult = {};
+  for(var name in dayAqi){
+    var date = new Date(name);
+    countDay += 1;
+    sumWeek += dayAqi[name];
+    if(date.getDay() == 0){
+      weekAqi = Math.floor(sumWeek/countDay);
+      
+      countDay = 0;
+      sumWeek = 0;
+      
+      weekResult[weekNum] = weekAqi;
+      chartData["week"] = weekResult;
+      weekNum +=1;
+      // console.log(weekAqi);
+      // console.log(weekNum);
+      // console.log(chartData)
+
+    }
+  }
+  console.log(chartData["week"])
 
 }
 //initAqiChartData()
