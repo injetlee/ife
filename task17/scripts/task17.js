@@ -60,8 +60,22 @@ var pageState = {
  * 渲染图表
  */
 function renderChart() {
-  // console.log(pageState.nowGraTime);
-  // console.log(pageState.nowSelectCity);
+  console.log(pageState.nowGraTime);
+  console.log(pageState.nowSelectCity);
+  var city = pageState.nowSelectCity;
+  var time = pageState.nowGraTime;
+  console.log(time+'haha')
+  initAqiChartData()
+  var getInsertLocation = document.getElementsByClassName("aqi-chart-wrap")[0];
+  getInsertLocation.style.height = '500' + 'px';
+  getInsertLocation.style.width = '100%';
+  getInsertLocation.style.backgroundColor = 'pink';
+  console.log('bbb')
+  if(time == "day"){
+    for(var name in chartData[city]){
+      console.log(name)
+    }
+  }
 
 }
 
@@ -87,6 +101,8 @@ function citySelectChange() {
   // 确定是否选项发生了变化 
   // 设置对应数据
   if(this.value){
+      chartData = {}
+
     pageState.nowSelectCity = this.value; 
   }
   var time = initGraTimeForm()
@@ -132,8 +148,10 @@ function initAqiChartData() {
   // var toJson = JSON.stringify(aqiSourceData,null,4);
   // chartData = toJson;
   // console.log(chartData)
-  var dayAqi = aqiSourceData["北京"];
-  chartData["北京"] = dayAqi;
+  console.log('gggg')
+  var dayAqi = aqiSourceData[pageState.nowSelectCity];
+  chartData[pageState.nowSelectCity] = dayAqi;
+  console.log(dayAqi)
   // console.log(dayAqi);
   //var weekAqi = dayAqi.length;
  var count = 0;
@@ -148,21 +166,43 @@ var weekResult = {};
     sumWeek += dayAqi[name];
     if(date.getDay() == 0){
       weekAqi = Math.floor(sumWeek/countDay);
-      
       countDay = 0;
-      sumWeek = 0;
-      
-      weekResult[weekNum] = weekAqi;
-      chartData["week"] = weekResult;
+      sumWeek = 0;      
+      weekResult[weekNum] = weekAqi;     
       weekNum +=1;
-      // console.log(weekAqi);
-      // console.log(weekNum);
-      // console.log(chartData)
-
+    }
+}
+console.log(countDay)
+    if(countDay!=0){
+        weekAqi = Math.floor(sumWeek/countDay);
+        weekResult[weekNum] = weekAqi;
+      //}
+    }
+    chartData["week"] = weekResult;
+  var countMonthDay = 0;
+  var sumMonth = 0;
+  var monthNum = 1;
+  var monthResult = {};
+  for(var name in dayAqi){
+    var date = new Date(name);
+    var dateVal = new Date(date.getFullYear(),date.getMonth()+1,0);
+    //console.log('aaa'+dateVal)
+    countMonthDay += 1;
+    sumMonth += dayAqi[name];
+    if(date.getDate() == dateVal.getDate()){
+      monthAqi = Math.floor(sumMonth/countMonthDay);
+      countMonthDay = 0;
+      monthResult[monthNum] = monthAqi;
+      monthNum += 1;
+      sumMonth = 0;
     }
   }
-  console.log(chartData["week"])
-
+  if(countMonthDay != 0){
+    console.log(countMonthDay)
+    monthResult[monthNum] = Math.floor(sumMonth/countMonthDay)
+  }
+  chartData["month"] = monthResult;
+  console.log(chartData)
 }
 //initAqiChartData()
 /**
@@ -172,6 +212,7 @@ function init() {
   initGraTimeForm()
   initCitySelector();
   initAqiChartData();
+  renderChart();
 }
 
 init();
