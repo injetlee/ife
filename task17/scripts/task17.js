@@ -67,14 +67,37 @@ function renderChart() {
   console.log(time+'haha')
   initAqiChartData()
   var getInsertLocation = document.getElementsByClassName("aqi-chart-wrap")[0];
-  getInsertLocation.style.height = '500' + 'px';
-  getInsertLocation.style.width = '100%';
-  getInsertLocation.style.backgroundColor = 'pink';
-  console.log('bbb')
+  var count = 0;
+
   if(time == "day"){
+    getInsertLocation.innerHTML = ""
+    //time = "北京";
+    //getInsertLocation.style.position = "relative";
     for(var name in chartData[city]){
-      console.log(name)
+      count++;
+      var addLi = document.createElement("li");
+      addLi.setAttribute("title",name+':'+chartData[city][name])
+
+      getInsertLocation.appendChild(addLi);
+      addLi.style.height = chartData[city][name];
+
     }
+  }else if(time != "day"){
+    getInsertLocation.innerHTML = "";
+    for(var name in chartData[time]){
+      count++;
+      var addLi = document.createElement("li");
+      getInsertLocation.appendChild(addLi);
+      addLi.setAttribute("title","第"+count+ time + ' ' + ':'+chartData[time][name])
+      addLi.style.height = chartData[time][name];
+
+
+    }
+  }
+  var getLi = document.getElementsByTagName("li");
+  for(var i=0;i<getLi.length;i++){
+    getLi[i].style.width = Math.floor(900/count);
+    getLi[i].style.backgroundColor = '#' + Math.floor(Math.random() * 0xFFFFFF).toString(16);
   }
 
 }
@@ -135,7 +158,6 @@ function initCitySelector() {
     option += "<option>" + name + "</option>";
   }
   getSelect.innerHTML = option;
-  //getSelect.selected = "沈阳";
   getSelect.onchange = citySelectChange;
   
 }
