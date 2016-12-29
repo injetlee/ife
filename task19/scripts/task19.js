@@ -39,7 +39,6 @@ var res = {
 		}
 	},
 	"rank":function(){
-		// var flag = false;
 		var delay = document.getElementById("speed").value;
 		console.log(delay)
 
