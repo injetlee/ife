@@ -1,8 +1,16 @@
 var res = {
 	"arr":[],
-	"right-in":function(){
-		var value = document.getElementById("input").value;
-
+	"insert":function(){
+		var value = document.getElementById("input").value.trim();
+		var result = value.split(/[^0-9A-Za-z_u4E00-\u9FA5]+/);
+		for (i in result){
+			res.arr.push(result[i])
+		}
+		render()
+	},
+	"search":function(){
+		var keyword = document.getElementById("keyword").value;
+		render(keyword)
 	}
 }
 
@@ -14,20 +22,15 @@ for(var i=0;i<getButton.length;i++){
 function render(val){
 	var str=""
 	var getDisplay = document.getElementById("display-area");
-	if(res.arr.length>60){
-		alert("当前已经有"+ res.arr.length + "个元素")
-	}
 	for(var i=0;i<res.arr.length;i++){
-		str += "<div>" + res.arr[i] + "</div>"
-	}
-	getDisplay.innerHTML = str;
-	var getDisplay = document.getElementById("display-area");
-	var getDiv = getDisplay.getElementsByTagName("div");
-	for(var i=0;i<getDiv.length;i++){
-		getDiv[i].onclick = function(){
-		alert(this.innerHTML)
-		getDisplay.removeChild(this)
-
+		if(val){
+			var resDisplay = res.arr[i];
+			str += "<div>" + resDisplay.replace(new RegExp(val,"g"),"<span class='select'>"+val + "</span>") + "</div>";
+		}else{
+			str += "<div>" + res.arr[i] + "</div>"
 		}
 	}
+	getDisplay.innerHTML = str;
+
+
 }
