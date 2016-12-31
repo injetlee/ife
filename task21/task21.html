@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	textarea{
+		resize:none;
+	}
+		#display-area,#display-tag{
+			display: flex;
+			align-items:flex-end;
+
+		}
+		#display-area>div,#display-tag>div{
+			flex:none;
+			background: #26D8BAFF;
+			margin-left:5px;
+			height:50px;
+			border:2px solid #000;
+			padding-top:2px;
+			font-size:15px;
+			color:#fff;
+		}
+		#display-area>div>.delete,#display-tag>div>.delete{
+			display:none;
+		}
+		#display-area>div:hover,#display-tag>div:hover{
+			background-color:#E67864FF;
+			color:#000;
+		}
+		#display-area>div:hover>.delete,#display-tag>div:hover>.delete{
+			display: inline;
+		}
+		#tag{
+			display:block;
+		}
+		#input{
+			display: block;
+			margin-top:50px;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<label id="tag">Tag
+		<input type="text" id="tag-input"></label>
+		<label>
+		<div id="display-tag">
+
+		</div>
+		<textarea name="" cols="30" id="input" rows="10"></textarea>
+		<button id="insert">确认</button>
+		</label>
+	</div>
+
+	</div>
+	<div id="display-area">
+		
+	</div>
+	<script src="scripts/task21.js"></script>
+</body>
+</html>

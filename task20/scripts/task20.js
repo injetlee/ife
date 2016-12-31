@@ -31,6 +31,4 @@ function render(val){
 		}
 	}
 	getDisplay.innerHTML = str;
-
-
 }
